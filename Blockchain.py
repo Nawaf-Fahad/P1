@@ -38,3 +38,7 @@ block0 = Block(get_utc_time(), "Say my name", 10)
 print(block0.data)
 print(block0.hash)
 print(block0.timestamp)
+
+block01 = Block(get_utc_time(), "", 10)  #empty 
+print(block01.data)
+

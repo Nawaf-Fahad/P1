@@ -32,13 +32,15 @@ parent.add_group(child)
 
 def is_user_in_group(user, group):
     
-    if user != group.get_name():
-        
-        return False
-    if user not in group.get_users():
-        
-        return False
+    if user == group.get_name():
+        return True
+    if user in group.get_users():
+        return True
     for grp in group.get_groups():
         return is_user_in_group(user, grp)
     return False
 
+
+print(is_user_in_group("sub_child_user", parent))  # True
+print(is_user_in_group("child", child))  # True
+print(is_user_in_group("", child)) # False

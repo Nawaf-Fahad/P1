@@ -98,7 +98,7 @@ linked_list_3 = LinkedList()
 linked_list_4 = LinkedList()
 
 element_1 = [3, 2, 4, 35, 6, 6, 6, 4, 3, 23]
-element_2 = [1, 4, 7, 9, 1, 21, 1]
+element_2 = []
 
 for i in element_1:
     linked_list_3.append(i)
@@ -106,6 +106,6 @@ for i in element_1:
 for i in element_2:
     linked_list_4.append(i)
 
-# Expect 1 -> 2 -> 35 -> 3 -> 4 -> 6 -> 7 -> 9 -> 21 -> 23
+# Expect 1 ->2 -> 35 -> 3 -> 4 -> 6 -> 23
 print(union(linked_list_3, linked_list_4))
 print(intersection(linked_list_3, linked_list_4))  # Expect empty 4

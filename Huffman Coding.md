@@ -1,3 +1,3 @@
-the space complexity depnedns on length string
-and time complexity is O(n)
+The space complexity is linear O(n)
+and time complexity is O(NLogN)
 we added more functions to implments the algorithm 

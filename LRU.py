@@ -51,7 +51,7 @@ class LRU_Cache(object):
  
     def get(self, key):
         if key is None or key=="" or key not in self.dict:
-            return -1
+            return "none"
        
         val = self.dict[key]
         self.dblist.add(Node(key=key, value=val))
@@ -61,7 +61,7 @@ class LRU_Cache(object):
  
     def set(self, key, value):
         if self.capacity <= 0:
-            return
+            return "none"
         x=len(self.dict)
         if x == self.capacity:
            
@@ -83,5 +83,7 @@ our_cache.get(9)      # returns -1 because 9 is not present in the cache
  
 our_cache.set(5, 5)
 our_cache.set(6, 6)
- 
+our_cache1 = LRU_Cache(0) #none
+our_cache2 = LRU_Cache(-1) #none
+
  

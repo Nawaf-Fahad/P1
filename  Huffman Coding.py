@@ -186,3 +186,22 @@ if __name__ == "__main__":
 
     print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
     print ("The content of the encoded data is: {}\n".format(decoded_data))
+
+    sen = "aaaaa" #The content of the data is: aaaaa
+
+    print ("The size of the data is: {}\n".format(sys.getsizeof(sen)))  #The size of the encoded data is: 24
+    print ("The content of the data is: {}\n".format(sen)) #The content of the encoded data is: 00000
+
+    encoded_data, tree = huffman_encoding(sen)
+
+    print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2)))) #The size of the decoded data is: 54
+    print ("The content of the encoded data is: {}\n".format(encoded_data))
+
+    decoded_data = huffman_decoding(encoded_data, tree)
+
+    print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data))) #The content of the encoded data is: aaaaa 
+    print ("The content of the encoded data is: {}\n".format(decoded_data))
+
+
+
+    
