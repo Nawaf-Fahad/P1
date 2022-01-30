@@ -34,11 +34,19 @@ def get_utc_time():
     utc = datetime.datetime.utcnow()
     return utc.strftime("%d/%m/%Y %H:%M:%S")
 
-block0 = Block(get_utc_time(), "Say my name", 10)
-print(block0.data)
-print(block0.hash)
-print(block0.timestamp)
-
-block01 = Block(get_utc_time(), "", 10)  #empty 
+block01 = Block(get_utc_time(), "Say my name", 10)
 print(block01.data)
+print(block01.hash)
+print(block01.timestamp)
+
+block02 = Block(get_utc_time(), "data", 10)
+print(block02.data)
+print(block02.hash)
+print(block02.timestamp)
+
+
+block03 = Block(get_utc_time(), "", 10)  #empty 
+print(block03.data)
+print(block03.hash)
+print(block03.timestamp)
 
